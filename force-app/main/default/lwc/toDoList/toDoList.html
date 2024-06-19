@@ -1,0 +1,30 @@
+<template>
+    <lightning-card icon-name="standard:task" title="New task" class="slds-card__body_inner">
+        <lightning-input 
+          type="text"
+          label="Enter task description"
+          placeholder="What to do..."
+          value={taskDescription}
+          onchange={handleDescriptionChange}
+        ></lightning-input>
+        <lightning-input 
+          type="date" 
+          label="Set task date" 
+          placeholder="When to do it..."
+          value={taskDate}
+          onchange={handleDateChange}
+          class="slds-m-bottom_medium"
+        ></lightning-input>
+        <lightning-button 
+          variant="brand"
+          label="Create task" 
+          onclick={handleCreate}
+        ></lightning-button>
+        <lightning-button 
+          variant="destructive"
+          label="Reset" 
+          onclick={handleReset} 
+          class="slds-m-left_small"
+        ></lightning-button>
+    </lightning-card>
+</template>
