@@ -1,0 +1,8 @@
+<template>
+    <lightning-card icon-name="standard:task" title="Task list" class="slds-card__body_inner">
+        <template for:each={events} for:item="event">
+            <p key={event.Id}>{event.Description} {event.ActivityDate}</p>
+        </template>
+    </lightning-card>
+
+</template>

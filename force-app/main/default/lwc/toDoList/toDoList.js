@@ -1,6 +1,5 @@
 import { LightningElement } from 'lwc';
 import addEvent from '@salesforce/apex/EventController.addEvent';
-import getEvents from '@salesforce/apex/EventController.getEvents';
 
 export default class ToDoList extends LightningElement {
     taskDescription;
@@ -16,6 +15,7 @@ export default class ToDoList extends LightningElement {
 
     async handleCreate() {
         addEvent({ description: this.taskDescription, duedate: this.taskDate });
+        alert('Task created.');
         this.handleReset();
     };
 
